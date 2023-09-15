@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -26,6 +27,20 @@ namespace E_TicaretWebSitesi.Cs
             }
             db.close();
             return cvp;
+
+        }
+        public DataTable mesajListe()
+        {
+            DataTable dt = new DataTable();
+            db.open();
+            SqlCommand command = new SqlCommand("select * from mail",db.baglanti);
+            SqlDataAdapter adt= new SqlDataAdapter(command);
+            adt.Fill(dt);
+            db.close();
+            return dt;
+        }
+        public bool mesajSil(int gMid)
+        {
 
         }
     }

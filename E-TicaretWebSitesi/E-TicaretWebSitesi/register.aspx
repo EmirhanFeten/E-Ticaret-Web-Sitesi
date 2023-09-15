@@ -8431,7 +8431,9 @@ h1, h2, h3, h4, h5,
                 <div class="form-group">
                     <asp:TextBox ID="TextBox6" class="form-control" placeholder="Mail Adresi*" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Boş Bırakılmaz" ForeColor="Red" ControlToValidate="TextBox6" Display="Dynamic"></asp:RequiredFieldValidator>
-	            </div>
+	                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox6" Display="Dynamic" ForeColor="Red" ErrorMessage="Geçerli Mail Adresi Giriniz" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>                
+                </div>
+                </div>
 	            <div class="form-group">
                     <asp:Button ID="Button1" class=" form-control btn btn-primary rounded submit px-3" runat="server" Text="Kaydol" OnClick="Button1_Click"  />
 	            </div>

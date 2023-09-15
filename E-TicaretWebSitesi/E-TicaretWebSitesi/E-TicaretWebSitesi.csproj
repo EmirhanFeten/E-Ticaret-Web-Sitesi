@@ -68,6 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\404.html" />
+    <Content Include="Admin\adminEkle.aspx" />
+    <Content Include="Admin\adminListe.aspx" />
     <Content Include="Admin\blank.html" />
     <Content Include="Admin\bootstrap-5-admin-template.jpg" />
     <Content Include="Admin\button.html" />
@@ -104,11 +106,15 @@
     <Content Include="Admin\lib\waypoints\links.php" />
     <Content Include="Admin\lib\waypoints\waypoints.min.js" />
     <Content Include="Admin\LICENSE.txt" />
+    <Content Include="Admin\mesajListe.aspx" />
     <Content Include="Admin\READ-ME.txt" />
     <Content Include="Admin\signin.html" />
     <Content Include="Admin\signup.html" />
     <Content Include="Admin\table.html" />
     <Content Include="Admin\typography.html" />
+    <Content Include="Admin\urunEkle.aspx" />
+    <Content Include="Admin\urunListe.aspx" />
+    <Content Include="Admin\uyelerListe.aspx" />
     <Content Include="Admin\widget.html" />
     <Content Include="blog-details.html" />
     <Content Include="blog.html" />
@@ -217,12 +223,54 @@
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\adminEkle.aspx.cs">
+      <DependentUpon>adminEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminEkle.aspx.designer.cs">
+      <DependentUpon>adminEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\adminListe.aspx.cs">
+      <DependentUpon>adminListe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\adminListe.aspx.designer.cs">
+      <DependentUpon>adminListe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\mesajListe.aspx.cs">
+      <DependentUpon>mesajListe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\mesajListe.aspx.designer.cs">
+      <DependentUpon>mesajListe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\urunEkle.aspx.cs">
+      <DependentUpon>urunEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\urunEkle.aspx.designer.cs">
+      <DependentUpon>urunEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\urunListe.aspx.cs">
+      <DependentUpon>urunListe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\urunListe.aspx.designer.cs">
+      <DependentUpon>urunListe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\uyelerListe.aspx.cs">
+      <DependentUpon>uyelerListe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\uyelerListe.aspx.designer.cs">
+      <DependentUpon>uyelerListe.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cs\Db.cs" />
     <Compile Include="Cs\Mesaj.cs" />

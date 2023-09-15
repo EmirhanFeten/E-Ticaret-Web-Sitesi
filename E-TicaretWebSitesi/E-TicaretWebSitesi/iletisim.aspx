@@ -93,7 +93,7 @@
                 <div class="col-lg-6 col-md-6 mb-5">
                     <asp:TextBox ID="TextBox2" style="width:100%" placeholder="Mail Adresiniz" class="form-control" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Boş Bırakılmaz" ForeColor="Red" ControlToValidate="TextBox2" Display="Dynamic"></asp:RequiredFieldValidator>
-                </div>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox2" Display="Dynamic" ForeColor="Red" ErrorMessage="Geçerli Mail Adresi Giriniz" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>                </div>
                 <div class="col-lg-12 col-md-6 mb-5">
                     <label>Mesaj Türü</label>
                     <asp:DropDownList ID="DropDownList1"  class="form-control" style="width:100em" runat="server" DataSourceID="SqlDataSource1" DataTextField="typeName" DataValueField="typeid">
@@ -107,6 +107,13 @@
                 <div class="col-lg-12 text-center mb-5">
                     <asp:Button ID="Button1" runat="server" class="site-btn" Text="GÖNDER" OnClick="Button1_Click"  />
                 </div>
+                <asp:Panel ID="Panel1" runat="server" style="width:100%"><div class="alert alert-info" role="alert">
+                    Mesajınız İletildi
+                </div></asp:Panel>
+                
+                <asp:Panel ID="Panel2" runat="server" style="width:100%"><div class="alert alert-info" role="alert">
+                    Mesajınız İletilemedi. Tekrar Deneyiniz
+                </div></asp:Panel>
             </div>
  
     </div>

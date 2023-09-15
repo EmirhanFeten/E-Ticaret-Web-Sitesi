@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_TicaretWebSitesi.Cs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,12 @@ namespace E_TicaretWebSitesi.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string uno = Request.QueryString["sil"];
+            if (uno!=null)
+            {
+                MesajCRUD mesajcrud=new MesajCRUD();
 
+            }
         }
     }
 }
