@@ -11,7 +11,17 @@ namespace E_TicaretWebSitesi.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["admin"]==null)
+            {
+                Response.Redirect("adminLogin.aspx");
+            }
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.RemoveAll();
+            Response.Redirect("adminLogin.aspx");
         }
     }
 }

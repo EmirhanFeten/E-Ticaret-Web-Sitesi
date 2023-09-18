@@ -82,6 +82,45 @@
                 </div>
             </div>
 
+            <%System.Data.DataTable mesajVeri = new System.Data.DataTable();
+        E_TicaretWebSitesi.Cs.MesajCRUD mesajcrud = new E_TicaretWebSitesi.Cs.MesajCRUD();
+        mesajVeri = mesajcrud.mesajListe();
+    %>
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">Mesaj Tablosu</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sıra Numarası</th>
+                                <th scope="col">Adı</th>
+                                <th scope="col">Mail Adresi</th>
+                                <th scope="col">Mesaj</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%for (int i = 0; i < mesajVeri.Rows.Count; i++)
+                                                {
+%>
+
+                                                
+                                            <tr>
+                                                <th scope="row"><%=mesajVeri.Rows[i][0]%></th>
+                                                <td><%=mesajVeri.Rows[i][1]%></td>
+                                                <td><%=mesajVeri.Rows[i][3]%></td>
+                                                <td><%=mesajVeri.Rows[i][4]%></td>
+                                          
+                                            </tr>
+                            
+                                            <%} %>
+                            
+                        </tbody>
+                        
+                    </table>
+                    <a href="mesajListe.aspx" style="float:right;height:50px;">Detay Sayfası</a>
+                </div>
+            </div>
+
 
             <div class="col-sm-12 col-xl-6">
                         <div class="bg-secondary rounded h-100 p-4">
@@ -109,32 +148,7 @@
                             <a href="adminListe.aspx" style="float:right;height:50px;">Detay Sayfası</a>
                         </div>
                     </div>
-            <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Mesaj Listesi</h6>
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Last Name</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="mesajListe.aspx" style="float:right;height:50px;">Detay Sayfası</a>
-                        </div>
-                    </div>
+            
         </div>
     </div>
 </asp:Content>

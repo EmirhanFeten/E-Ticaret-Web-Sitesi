@@ -12,11 +12,21 @@ namespace E_TicaretWebSitesi.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Panel1.Visible = false;
+            string mesajUno = Request.QueryString["mesaj"];
+            string mesajTo = Request.QueryString["to"];
+            if (mesajUno!=null)
+            {
+                Email email = new Email();
+                email.hazirMesaj(mesajTo);
+                Panel1.Visible=true;
+            }
+
             string uno = Request.QueryString["sil"];
             if (uno!=null)
             {
                 MesajCRUD mesajcrud=new MesajCRUD();
-
+                mesajcrud.mesajSil(Convert.ToInt32( Request.QueryString["sil"]));
             }
         }
     }

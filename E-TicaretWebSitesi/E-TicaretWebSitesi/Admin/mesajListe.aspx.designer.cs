@@ -13,5 +13,14 @@ namespace E_TicaretWebSitesi.Admin
 
     public partial class mesajListe
     {
+
+        /// <summary>
+        /// Panel1 denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluşturulan alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
     }
 }

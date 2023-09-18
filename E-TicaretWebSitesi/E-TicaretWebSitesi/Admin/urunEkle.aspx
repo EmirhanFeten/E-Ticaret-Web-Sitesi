@@ -6,7 +6,7 @@
              <div class="row g-4">
  <div class="col-sm-12 col-xl-12">
                      <div class="bg-secondary rounded h-100 p-4">
-                         <h6 class="mb-4">Floating Label</h6>
+                         <h6 class="mb-4">Ürün Ekle</h6>
                          <div class="form-floating mb-3">
 
                              <%--<input type="email" class="form-control" id="floatingInput"
