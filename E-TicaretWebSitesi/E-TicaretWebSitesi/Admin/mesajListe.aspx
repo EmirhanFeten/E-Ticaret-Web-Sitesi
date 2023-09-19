@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
                 <%System.Data.DataTable veri = new System.Data.DataTable();
         E_TicaretWebSitesi.Cs.MesajCRUD mesajcrud = new E_TicaretWebSitesi.Cs.MesajCRUD();
-        veri = mesajcrud.mesajListe();
+        veri = mesajcrud.mesajListeUzun();
     %>
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">

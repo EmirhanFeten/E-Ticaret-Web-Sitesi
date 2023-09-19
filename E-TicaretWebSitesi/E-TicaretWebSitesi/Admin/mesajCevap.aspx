@@ -13,6 +13,9 @@
                         <h6 class="mb-4">Detaylı Mesaj</h6>
                             </div>
                         <div class="row g-4">
+                        <div class="form-floating mb-3 col-lg-12">
+                            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                        </div>
                         <div class="form-floating mb-3 col-lg-6">
 
                             <%--<input type="email" class="form-control" id="floatingInput"

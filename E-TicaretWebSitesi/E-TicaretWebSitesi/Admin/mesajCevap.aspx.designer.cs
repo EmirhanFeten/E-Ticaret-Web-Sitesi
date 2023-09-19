@@ -24,6 +24,15 @@ namespace E_TicaretWebSitesi.Admin
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
+        /// Label1 denetimi.
+        /// </summary>
+        /// <remarks>
+        /// Otomatik olarak oluşturulan alan.
+        /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
         /// TextBox1 denetimi.
         /// </summary>
         /// <remarks>

@@ -101,7 +101,7 @@
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:dbyol %>" SelectCommand="SELECT * FROM [emailType]"></asp:SqlDataSource>
                 </div>
                 <div class="col-lg-12 text-center mb-5">
-                    <asp:TextBox ID="TextBox3" style="width:100%; height:150px;" placeholder="Mesajınız" class="form-control" runat="server" TextMode="MultiLine"></asp:TextBox>
+                    <asp:TextBox ID="TextBox3" style="width:100%; height:150px;" placeholder="Mesajınız (1-200)" class="form-control" runat="server" TextMode="MultiLine" MaxLength="200"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Boş Bırakılmaz" ForeColor="Red" ControlToValidate="TextBox3" Display="Dynamic"></asp:RequiredFieldValidator>
                 </div>
                 <div class="col-lg-12 text-center mb-5">

@@ -33,8 +33,18 @@ namespace E_TicaretWebSitesi.Cs
         {
             DataTable dt = new DataTable();
             db.open();
-            SqlCommand command = new SqlCommand("select * from mail",db.baglanti);
+            SqlCommand command = new SqlCommand("select mailid,mailName,typeName,mailAdress,SUBSTRING(mailMessage,1,30)  from mail,emailType where mail.typeId=emailType.typeid", db.baglanti);
             SqlDataAdapter adt= new SqlDataAdapter(command);
+            adt.Fill(dt);
+            db.close();
+            return dt;
+        }
+        public DataTable mesajListeUzun()
+        {
+            DataTable dt = new DataTable();
+            db.open();
+            SqlCommand command = new SqlCommand("select mailid,mailName,typeName,mailAdress,mailMessage from mail,emailType where mail.typeId=emailType.typeid", db.baglanti);
+            SqlDataAdapter adt = new SqlDataAdapter(command);
             adt.Fill(dt);
             db.close();
             return dt;

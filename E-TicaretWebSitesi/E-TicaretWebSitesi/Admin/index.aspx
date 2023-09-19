@@ -100,15 +100,27 @@
                         </thead>
                         <tbody>
                             <%for (int i = 0; i < mesajVeri.Rows.Count; i++)
-                                                {
+                                    
+                                {
 %>
-
+                           
                                                 
                                             <tr>
                                                 <th scope="row"><%=mesajVeri.Rows[i][0]%></th>
                                                 <td><%=mesajVeri.Rows[i][1]%></td>
                                                 <td><%=mesajVeri.Rows[i][3]%></td>
-                                                <td><%=mesajVeri.Rows[i][4]%></td>
+                                             <%string msj = mesajVeri.Rows[i][4].ToString();
+                                                 int msjKrtS = msj.Length;
+                                                 if (msjKrtS<30)
+                                                 {               %>                                    
+                                                   <td><%=mesajVeri.Rows[i][4]%></td>
+                                              <%}
+                                                  else
+                                                  {%>
+                                                <td><%=mesajVeri.Rows[i][4]%>...</td>
+                                                  <%}%>
+                                                
+                                                
                                           
                                             </tr>
                             
@@ -122,32 +134,44 @@
             </div>
 
 
+            
+            <%System.Data.DataTable adminVeri = new System.Data.DataTable();
+        E_TicaretWebSitesi.Cs.AdminCRUD admincrud = new E_TicaretWebSitesi.Cs.AdminCRUD();
+        adminVeri = admincrud.adminListe();
+    %>
             <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Admin Listesi</h6>
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Last Name</th>
-                                        <th scope="col">Last Name</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>John</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                        <td>Doe</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="adminListe.aspx" style="float:right;height:50px;">Detay Sayfası</a>
-                        </div>
-                    </div>
+                <div class="bg-secondary rounded h-100 p-4">
+                    <h6 class="mb-4">Admin Tablosu</h6>
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sıra Numarası</th>
+                                <th scope="col">Kullanıcı Adı</th>
+                                <th scope="col">Mail Adresi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%for (int i = 0; i < adminVeri.Rows.Count; i++)
+                                                {
+%>
+
+                                                
+                                            <tr>
+                                                <th scope="row"><%=adminVeri.Rows[i][0]%></th>
+                                                <td><%=adminVeri.Rows[i][1]%></td>
+                                                <td><%=adminVeri.Rows[i][3]%></td>
+                                            </tr>
+                            
+                                            <%} %>
+                            
+                        </tbody>
+                        
+                    </table>
+                    <a href="adminListe.aspx" style="float:right;height:50px;">Detay Sayfası</a>
+                </div>
+            </div>
+
+
             
         </div>
     </div>

@@ -25,5 +25,15 @@ namespace E_TicaretWebSitesi.Cs
             db.close();
             return cvp;
         }
+        public DataTable adminListe()
+        {
+            DataTable dt = new DataTable();
+            db.open();
+            SqlCommand command = new SqlCommand("select * from admUser", db.baglanti);
+            SqlDataAdapter adt = new SqlDataAdapter(command);
+            adt.Fill(dt);
+            db.close();
+            return dt;
+        }
     }
 }

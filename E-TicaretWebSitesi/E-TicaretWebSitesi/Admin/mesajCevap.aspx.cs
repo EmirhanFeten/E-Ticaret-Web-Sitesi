@@ -23,6 +23,7 @@ namespace E_TicaretWebSitesi.Admin
                     DataTable dt = mesajcrud.mesajDetayListe(Convert.ToInt32(uno));
                     TextBox1.Text = dt.Rows[0][1].ToString();
                     TextBox2.Text = dt.Rows[0][3].ToString();
+                    Label1.Text= "Gelen Mesaj: " + dt.Rows[0][4].ToString();
                 }
                 
             }
